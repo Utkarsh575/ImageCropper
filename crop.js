@@ -6,7 +6,8 @@ async function crop() {
   const image = await Jimp.read(
     "https://rsmcnewdelhi.imd.gov.in/images/satelliteImage/sector-ir.jpg"
   );
-  image.crop(200, 200, 470, 470).write("./crop.jpg");
+  // x y w h
+  image.crop(390, 340, 669, 669).write("./crop.jpg");
 }
 
 crop(); // Calling the function here using async
